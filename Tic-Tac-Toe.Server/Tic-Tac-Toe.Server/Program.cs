@@ -26,6 +26,16 @@ namespace Tic_Tac_Toe.Server
 
             app.UseAuthorization();
 
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp"; // 你的 Vue 项目路径
+
+                if (app.Environment.IsDevelopment())
+                {
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:5173");
+                }
+            });
+
             app.MapRazorPages();
 
             app.Run();
