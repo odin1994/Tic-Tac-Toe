@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\" />
     <Folder Include="wwwroot\vue-app\" />
   </ItemGroup>
 
